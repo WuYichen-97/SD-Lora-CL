@@ -1,1 +1,1 @@
-# S-Lora-CL
+# SD-Lora-CL
