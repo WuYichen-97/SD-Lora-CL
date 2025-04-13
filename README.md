@@ -19,5 +19,5 @@ Welcome to the official code repository for "[SD-LoRA: Scalable Decoupled Low-Ra
 ## 🙏 Acknowledgement
 This repo is built upon the following projects:
 
-* [LoRA-ViT]([https://github.com/JamesQFreeman/LoRA-ViT](https://github.com/JamesQFreeman/LoRA-ViT))
-* [PILOT]([https://github.com/sun-hailong/LAMDA-PILOT](https://github.com/JamesQFreeman/LoRA-ViT))
+* [LoRA-ViT](https://github.com/JamesQFreeman/LoRA-ViT)
+* [PILOT](https://github.com/sun-hailong/LAMDA-PILOT)
