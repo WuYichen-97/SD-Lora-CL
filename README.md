@@ -1,6 +1,6 @@
 # SD-LoRA: Scalable Decoupled Low-Rank Adaptation for Class Incremental Learning
 
-Welcome to the official code repository for "[SD-LoRA: Scalable Decoupled Low-Rank Adaptation for Class Incremental Learning]([https://arxiv.org/abs/2406.01721](https://arxiv.org/pdf/2501.13198))".**(ICLR 2025, Oral)**
+Welcome to the official code repository for [SD-LoRA: Scalable Decoupled Low-Rank Adaptation for Class Incremental Learning **(ICLR 2025, Oral)**](https://openreview.net/pdf?id=5U1rlpX68A).
 
 ## 👀 Introduction
 ![SD-LoRA](imgs/intro.jpg)
