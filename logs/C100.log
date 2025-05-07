@@ -1,0 +1,654 @@
+seed [1994]
+devices_type ['0']
+2024-09-20 23:31:09,078 [trainer.py] => config: ./exps/finetune1.json
+2024-09-20 23:31:09,085 [trainer.py] => seed: 1994
+2024-09-20 23:31:09,086 [trainer.py] => prefix: reproduce
+2024-09-20 23:31:09,086 [trainer.py] => dataset: cifar224
+2024-09-20 23:31:09,086 [trainer.py] => memory_size: 0
+2024-09-20 23:31:09,086 [trainer.py] => memory_per_class: 0
+2024-09-20 23:31:09,086 [trainer.py] => fixed_memory: False
+2024-09-20 23:31:09,087 [trainer.py] => shuffle: True
+2024-09-20 23:31:09,087 [trainer.py] => init_cls: 10
+2024-09-20 23:31:09,087 [trainer.py] => increment: 10
+2024-09-20 23:31:09,087 [trainer.py] => model_name: finetune
+2024-09-20 23:31:09,087 [trainer.py] => backbone_type: vit_base_patch16_224
+2024-09-20 23:31:09,087 [trainer.py] => device: [device(type='cuda', index=0)]
+2024-09-20 23:31:09,087 [trainer.py] => optimizer: adam
+2024-09-20 23:31:09,088 [trainer.py] => scheduler: constant
+2024-09-20 23:31:09,088 [trainer.py] => tuned_epoch: 10
+2024-09-20 23:31:09,088 [trainer.py] => filepath: ./CF100-1/
+2024-09-20 23:31:09,088 [trainer.py] => init_epoch: 20
+2024-09-20 23:31:09,088 [trainer.py] => init_lr: 0.008
+2024-09-20 23:31:09,088 [trainer.py] => init_milestones: [1000]
+2024-09-20 23:31:09,089 [trainer.py] => init_lr_decay: 0
+2024-09-20 23:31:09,089 [trainer.py] => init_weight_decay: 0.0005
+2024-09-20 23:31:09,089 [trainer.py] => epochs: 20
+2024-09-20 23:31:09,089 [trainer.py] => lrate: 0.008
+2024-09-20 23:31:09,089 [trainer.py] => milestones: [40, 70]
+2024-09-20 23:31:09,089 [trainer.py] => lrate_decay: 0
+2024-09-20 23:31:09,089 [trainer.py] => batch_size: 128
+2024-09-20 23:31:09,090 [trainer.py] => weight_decay: 0.0005
+Files already downloaded and verified
+Files already downloaded and verified
+2024-09-20 23:31:11,390 [data_manager.py] => [72, 6, 33, 96, 60, 94, 29, 40, 45, 66, 51, 8, 78, 49, 70, 22, 53, 82, 87, 23, 15, 89, 43, 35, 32, 25, 44, 86, 68, 83, 17, 55, 31, 85, 38, 61, 0, 16, 92, 59, 56, 19, 74, 12, 13, 88, 64, 42, 71, 46, 97, 58, 50, 41, 26, 1, 7, 69, 21, 27, 95, 14, 99, 9, 81, 10, 73, 11, 91, 36, 77, 57, 79, 47, 2, 98, 48, 20, 67, 37, 18, 65, 3, 52, 28, 39, 5, 93, 4, 62, 24, 63, 30, 84, 76, 90, 80, 75, 34, 54]
+!!!!!!! multiple_gpus [device(type='cuda', index=0)]
+This is for the BaseNet initialization.
+2024-09-20 23:31:19,199 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2024-09-20 23:31:19,314 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./CF100-1/
+Initialize task-id and curtask id
+After BaseNet initialization.
+task 0
+2024-09-20 23:31:20,065 [trainer.py] => All params: 171965973
+2024-09-20 23:31:20,066 [trainer.py] => Trainable params: 368661
+2024-09-20 23:31:20,067 [finetune.py] => Learning on 0-10
+/n/home02/ycwu/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+Task 0, Epoch 1/20 => Loss 0.862, Train_accy 73.30, Test_accy 92.70:   0%|          | 0/20 [00:38<?, ?it/s]
+Task 0, Epoch 1/20 => Loss 0.862, Train_accy 73.30, Test_accy 92.70:   5%|▌         | 1/20 [00:38<12:04, 38.14s/it]
+Task 0, Epoch 2/20 => Loss 0.428, Train_accy 86.08:   5%|▌         | 1/20 [01:08<12:04, 38.14s/it]                 
+Task 0, Epoch 2/20 => Loss 0.428, Train_accy 86.08:  10%|█         | 2/20 [01:08<10:03, 33.50s/it]
+Task 0, Epoch 3/20 => Loss 0.369, Train_accy 88.10:  10%|█         | 2/20 [01:39<10:03, 33.50s/it]
+Task 0, Epoch 3/20 => Loss 0.369, Train_accy 88.10:  15%|█▌        | 3/20 [01:39<09:07, 32.20s/it]
+Task 0, Epoch 4/20 => Loss 0.301, Train_accy 89.92:  15%|█▌        | 3/20 [02:09<09:07, 32.20s/it]
+Task 0, Epoch 4/20 => Loss 0.301, Train_accy 89.92:  20%|██        | 4/20 [02:09<08:22, 31.42s/it]
+Task 0, Epoch 5/20 => Loss 0.310, Train_accy 90.08:  20%|██        | 4/20 [02:39<08:22, 31.42s/it]
+Task 0, Epoch 5/20 => Loss 0.310, Train_accy 90.08:  25%|██▌       | 5/20 [02:39<07:42, 30.83s/it]
+Task 0, Epoch 6/20 => Loss 0.303, Train_accy 89.98, Test_accy 95.80:  25%|██▌       | 5/20 [03:15<07:42, 30.83s/it]
+Task 0, Epoch 6/20 => Loss 0.303, Train_accy 89.98, Test_accy 95.80:  30%|███       | 6/20 [03:15<07:39, 32.80s/it]
+Task 0, Epoch 7/20 => Loss 0.269, Train_accy 90.84:  30%|███       | 6/20 [03:46<07:39, 32.80s/it]                 
+Task 0, Epoch 7/20 => Loss 0.269, Train_accy 90.84:  35%|███▌      | 7/20 [03:46<06:58, 32.21s/it]
+Task 0, Epoch 8/20 => Loss 0.250, Train_accy 91.52:  35%|███▌      | 7/20 [04:16<06:58, 32.21s/it]
+Task 0, Epoch 8/20 => Loss 0.250, Train_accy 91.52:  40%|████      | 8/20 [04:16<06:16, 31.35s/it]
+Task 0, Epoch 9/20 => Loss 0.255, Train_accy 91.18:  40%|████      | 8/20 [04:47<06:16, 31.35s/it]
+Task 0, Epoch 9/20 => Loss 0.255, Train_accy 91.18:  45%|████▌     | 9/20 [04:47<05:43, 31.21s/it]
+Task 0, Epoch 10/20 => Loss 0.263, Train_accy 91.26:  45%|████▌     | 9/20 [05:17<05:43, 31.21s/it]
+Task 0, Epoch 10/20 => Loss 0.263, Train_accy 91.26:  50%|█████     | 10/20 [05:17<05:09, 30.92s/it]
+Task 0, Epoch 11/20 => Loss 0.243, Train_accy 91.76, Test_accy 96.70:  50%|█████     | 10/20 [05:54<05:09, 30.92s/it]
+Task 0, Epoch 11/20 => Loss 0.243, Train_accy 91.76, Test_accy 96.70:  55%|█████▌    | 11/20 [05:54<04:55, 32.85s/it]
+Task 0, Epoch 12/20 => Loss 0.224, Train_accy 92.70:  55%|█████▌    | 11/20 [06:24<04:55, 32.85s/it]                 
+Task 0, Epoch 12/20 => Loss 0.224, Train_accy 92.70:  60%|██████    | 12/20 [06:24<04:16, 32.01s/it]
+Task 0, Epoch 13/20 => Loss 0.231, Train_accy 92.42:  60%|██████    | 12/20 [06:54<04:16, 32.01s/it]
+Task 0, Epoch 13/20 => Loss 0.231, Train_accy 92.42:  65%|██████▌   | 13/20 [06:54<03:39, 31.38s/it]
+Task 0, Epoch 14/20 => Loss 0.228, Train_accy 92.40:  65%|██████▌   | 13/20 [07:25<03:39, 31.38s/it]
+Task 0, Epoch 14/20 => Loss 0.228, Train_accy 92.40:  70%|███████   | 14/20 [07:25<03:06, 31.17s/it]
+Task 0, Epoch 15/20 => Loss 0.245, Train_accy 91.90:  70%|███████   | 14/20 [07:55<03:06, 31.17s/it]
+Task 0, Epoch 15/20 => Loss 0.245, Train_accy 91.90:  75%|███████▌  | 15/20 [07:55<02:34, 30.80s/it]
+Task 0, Epoch 16/20 => Loss 0.245, Train_accy 92.10, Test_accy 97.10:  75%|███████▌  | 15/20 [08:32<02:34, 30.80s/it]
+Task 0, Epoch 16/20 => Loss 0.245, Train_accy 92.10, Test_accy 97.10:  80%|████████  | 16/20 [08:32<02:11, 32.79s/it]
+Task 0, Epoch 17/20 => Loss 0.234, Train_accy 91.84:  80%|████████  | 16/20 [09:03<02:11, 32.79s/it]                 
+Task 0, Epoch 17/20 => Loss 0.234, Train_accy 91.84:  85%|████████▌ | 17/20 [09:03<01:36, 32.14s/it]
+Task 0, Epoch 18/20 => Loss 0.230, Train_accy 92.00:  85%|████████▌ | 17/20 [09:32<01:36, 32.14s/it]
+Task 0, Epoch 18/20 => Loss 0.230, Train_accy 92.00:  90%|█████████ | 18/20 [09:32<01:02, 31.23s/it]
+Task 0, Epoch 19/20 => Loss 0.219, Train_accy 92.84:  90%|█████████ | 18/20 [10:02<01:02, 31.23s/it]
+Task 0, Epoch 19/20 => Loss 0.219, Train_accy 92.84:  95%|█████████▌| 19/20 [10:02<00:30, 30.87s/it]
+Task 0, Epoch 20/20 => Loss 0.222, Train_accy 92.68:  95%|█████████▌| 19/20 [10:32<00:30, 30.87s/it]
+Task 0, Epoch 20/20 => Loss 0.222, Train_accy 92.68: 100%|██████████| 20/20 [10:32<00:00, 30.54s/it]
+Task 0, Epoch 20/20 => Loss 0.222, Train_accy 92.68: 100%|██████████| 20/20 [10:32<00:00, 31.61s/it]
+2024-09-20 23:41:52,374 [finetune.py] => Task 0, Epoch 20/20 => Loss 0.222, Train_accy 92.68
+self.wrapped_param Parameter containing:
+tensor([1.3423], device='cuda:0', requires_grad=True)
+self.wrapped_param_prev []
+/n/holylfs05/LABS/pfister_lab/Lab/coxfs01/pfister_lab2/Lab/yichenwu/LoRA-CL1/backbone/lora.py:419: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  saved_lora_A['saved_A_'+str(i)] = torch.load(file_path)
+/n/holylfs05/LABS/pfister_lab/Lab/coxfs01/pfister_lab2/Lab/yichenwu/LoRA-CL1/backbone/lora.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  saved_lora_B['saved_B_'+str(i)] = torch.load(file_path)
+/n/holylfs05/LABS/pfister_lab/Lab/coxfs01/pfister_lab2/Lab/yichenwu/LoRA-CL1/backbone/lora.py:476: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  temp_weights = torch.load(self.save_file+'CLs_weight'+str(self.task_id-1)+'.pt')
+/n/holylfs05/LABS/pfister_lab/Lab/coxfs01/pfister_lab2/Lab/yichenwu/LoRA-CL1/backbone/lora.py:477: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  temp_bias = torch.load(self.save_file+'CLs_bias'+str(self.task_id-1)+'.pt')
+2024-09-20 23:41:59,947 [trainer.py] => No NME accuracy.
+2024-09-20 23:41:59,947 [trainer.py] => CNN: {'total': np.float64(97.3), '00-09': np.float64(97.3), 'old': 0, 'new': np.float64(97.3)}
+2024-09-20 23:41:59,947 [trainer.py] => CNN top1 curve: [np.float64(97.3)]
+2024-09-20 23:41:59,947 [trainer.py] => CNN top5 curve: [np.float64(100.0)]
+
+Average Accuracy (CNN): 97.3
+2024-09-20 23:41:59,948 [trainer.py] => Average Accuracy (CNN): 97.3 
+
+task 1
+2024-09-20 23:41:59,951 [trainer.py] => All params: 171612713
+2024-09-20 23:41:59,953 [trainer.py] => Trainable params: 15401
+2024-09-20 23:41:59,955 [finetune.py] => Learning on 10-20
+2024-09-20 23:42:00,959 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2024-09-20 23:42:01,077 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./CF100-1/
+
+  0%|          | 0/20 [00:00<?, ?it/s]/n/holylfs05/LABS/pfister_lab/Lab/coxfs01/pfister_lab2/Lab/yichenwu/LoRA-CL1/backbone/lora.py:588: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  w_As = torch.load(file_path)
+
+Task 1, Epoch 1/20 => Loss 0.504, Train_accy 71.88, Test_accy 94.95:   0%|          | 0/20 [00:41<?, ?it/s]
+Task 1, Epoch 1/20 => Loss 0.504, Train_accy 71.88, Test_accy 94.95:   5%|▌         | 1/20 [00:41<13:08, 41.52s/it]
+Task 1, Epoch 2/20 => Loss 0.182, Train_accy 91.02:   5%|▌         | 1/20 [01:12<13:08, 41.52s/it]                 
+Task 1, Epoch 2/20 => Loss 0.182, Train_accy 91.02:  10%|█         | 2/20 [01:12<10:38, 35.45s/it]
+Task 1, Epoch 3/20 => Loss 0.157, Train_accy 91.46:  10%|█         | 2/20 [01:43<10:38, 35.45s/it]
+Task 1, Epoch 3/20 => Loss 0.157, Train_accy 91.46:  15%|█▌        | 3/20 [01:43<09:28, 33.42s/it]
+Task 1, Epoch 4/20 => Loss 0.155, Train_accy 91.48:  15%|█▌        | 3/20 [02:14<09:28, 33.42s/it]
+Task 1, Epoch 4/20 => Loss 0.155, Train_accy 91.48:  20%|██        | 4/20 [02:14<08:41, 32.57s/it]
+Task 1, Epoch 5/20 => Loss 0.155, Train_accy 92.10:  20%|██        | 4/20 [02:46<08:41, 32.57s/it]
+Task 1, Epoch 5/20 => Loss 0.155, Train_accy 92.10:  25%|██▌       | 5/20 [02:46<08:03, 32.21s/it]
+Task 1, Epoch 6/20 => Loss 0.177, Train_accy 91.90, Test_accy 96.15:  25%|██▌       | 5/20 [03:28<08:03, 32.21s/it]
+Task 1, Epoch 6/20 => Loss 0.177, Train_accy 91.90, Test_accy 96.15:  30%|███       | 6/20 [03:28<08:16, 35.43s/it]
+Task 1, Epoch 7/20 => Loss 0.159, Train_accy 91.24:  30%|███       | 6/20 [03:59<08:16, 35.43s/it]                 
+Task 1, Epoch 7/20 => Loss 0.159, Train_accy 91.24:  35%|███▌      | 7/20 [03:59<07:23, 34.13s/it]
+Task 1, Epoch 8/20 => Loss 0.150, Train_accy 91.86:  35%|███▌      | 7/20 [04:30<07:23, 34.13s/it]
+Task 1, Epoch 8/20 => Loss 0.150, Train_accy 91.86:  40%|████      | 8/20 [04:30<06:37, 33.14s/it]
+Task 1, Epoch 9/20 => Loss 0.137, Train_accy 92.10:  40%|████      | 8/20 [05:01<06:37, 33.14s/it]
+Task 1, Epoch 9/20 => Loss 0.137, Train_accy 92.10:  45%|████▌     | 9/20 [05:01<05:57, 32.51s/it]
+Task 1, Epoch 10/20 => Loss 0.158, Train_accy 92.30:  45%|████▌     | 9/20 [05:32<05:57, 32.51s/it]
+Task 1, Epoch 10/20 => Loss 0.158, Train_accy 92.30:  50%|█████     | 10/20 [05:32<05:20, 32.02s/it]
+Task 1, Epoch 11/20 => Loss 0.154, Train_accy 92.04, Test_accy 96.30:  50%|█████     | 10/20 [06:13<05:20, 32.02s/it]
+Task 1, Epoch 11/20 => Loss 0.154, Train_accy 92.04, Test_accy 96.30:  55%|█████▌    | 11/20 [06:13<05:13, 34.81s/it]
+Task 1, Epoch 12/20 => Loss 0.158, Train_accy 91.98:  55%|█████▌    | 11/20 [06:45<05:13, 34.81s/it]                 
+Task 1, Epoch 12/20 => Loss 0.158, Train_accy 91.98:  60%|██████    | 12/20 [06:45<04:30, 33.84s/it]
+Task 1, Epoch 13/20 => Loss 0.131, Train_accy 93.02:  60%|██████    | 12/20 [07:17<04:30, 33.84s/it]
+Task 1, Epoch 13/20 => Loss 0.131, Train_accy 93.02:  65%|██████▌   | 13/20 [07:17<03:53, 33.32s/it]
+Task 1, Epoch 14/20 => Loss 0.123, Train_accy 93.36:  65%|██████▌   | 13/20 [07:49<03:53, 33.32s/it]
+Task 1, Epoch 14/20 => Loss 0.123, Train_accy 93.36:  70%|███████   | 14/20 [07:49<03:18, 33.03s/it]
+Task 1, Epoch 15/20 => Loss 0.125, Train_accy 93.72:  70%|███████   | 14/20 [08:21<03:18, 33.03s/it]
+Task 1, Epoch 15/20 => Loss 0.125, Train_accy 93.72:  75%|███████▌  | 15/20 [08:21<02:43, 32.70s/it]
+Task 1, Epoch 16/20 => Loss 0.136, Train_accy 93.30, Test_accy 96.45:  75%|███████▌  | 15/20 [09:02<02:43, 32.70s/it]
+Task 1, Epoch 16/20 => Loss 0.136, Train_accy 93.30, Test_accy 96.45:  80%|████████  | 16/20 [09:02<02:20, 35.05s/it]
+Task 1, Epoch 17/20 => Loss 0.132, Train_accy 93.66:  80%|████████  | 16/20 [09:33<02:20, 35.05s/it]                 
+Task 1, Epoch 17/20 => Loss 0.132, Train_accy 93.66:  85%|████████▌ | 17/20 [09:33<01:41, 33.77s/it]
+Task 1, Epoch 18/20 => Loss 0.117, Train_accy 94.12:  85%|████████▌ | 17/20 [10:04<01:41, 33.77s/it]
+Task 1, Epoch 18/20 => Loss 0.117, Train_accy 94.12:  90%|█████████ | 18/20 [10:04<01:06, 33.03s/it]
+Task 1, Epoch 19/20 => Loss 0.126, Train_accy 93.86:  90%|█████████ | 18/20 [10:35<01:06, 33.03s/it]
+Task 1, Epoch 19/20 => Loss 0.126, Train_accy 93.86:  95%|█████████▌| 19/20 [10:35<00:32, 32.51s/it]
+Task 1, Epoch 20/20 => Loss 0.117, Train_accy 94.26:  95%|█████████▌| 19/20 [11:07<00:32, 32.51s/it]
+Task 1, Epoch 20/20 => Loss 0.117, Train_accy 94.26: 100%|██████████| 20/20 [11:07<00:00, 32.24s/it]
+Task 1, Epoch 20/20 => Loss 0.117, Train_accy 94.26: 100%|██████████| 20/20 [11:07<00:00, 33.37s/it]
+2024-09-20 23:53:08,868 [finetune.py] => Task 1, Epoch 20/20 => Loss 0.117, Train_accy 94.26
+2024-09-20 23:53:19,516 [trainer.py] => No NME accuracy.
+2024-09-20 23:53:19,517 [trainer.py] => CNN: {'total': np.float64(96.35), '00-09': np.float64(95.1), '10-19': np.float64(97.6), 'old': np.float64(95.1), 'new': np.float64(97.6)}
+2024-09-20 23:53:19,517 [trainer.py] => CNN top1 curve: [np.float64(97.3), np.float64(96.35)]
+2024-09-20 23:53:19,517 [trainer.py] => CNN top5 curve: [np.float64(100.0), np.float64(99.9)]
+
+Average Accuracy (CNN): 96.82499999999999
+2024-09-20 23:53:19,517 [trainer.py] => Average Accuracy (CNN): 96.82499999999999 
+
+task 2
+2024-09-20 23:53:19,518 [trainer.py] => All params: 171628093
+2024-09-20 23:53:19,519 [trainer.py] => Trainable params: 30781
+2024-09-20 23:53:19,520 [finetune.py] => Learning on 20-30
+2024-09-20 23:53:20,523 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2024-09-20 23:53:20,633 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./CF100-1/
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+Task 2, Epoch 1/20 => Loss 0.593, Train_accy 61.42, Test_accy 94.63:   0%|          | 0/20 [00:44<?, ?it/s]
+Task 2, Epoch 1/20 => Loss 0.593, Train_accy 61.42, Test_accy 94.63:   5%|▌         | 1/20 [00:44<13:57, 44.07s/it]
+Task 2, Epoch 2/20 => Loss 0.251, Train_accy 83.12:   5%|▌         | 1/20 [01:16<13:57, 44.07s/it]                 
+Task 2, Epoch 2/20 => Loss 0.251, Train_accy 83.12:  10%|█         | 2/20 [01:16<11:13, 37.43s/it]
+Task 2, Epoch 3/20 => Loss 0.227, Train_accy 81.84:  10%|█         | 2/20 [01:49<11:13, 37.43s/it]
+Task 2, Epoch 3/20 => Loss 0.227, Train_accy 81.84:  15%|█▌        | 3/20 [01:49<09:59, 35.28s/it]
+Task 2, Epoch 4/20 => Loss 0.214, Train_accy 82.62:  15%|█▌        | 3/20 [02:22<09:59, 35.28s/it]
+Task 2, Epoch 4/20 => Loss 0.214, Train_accy 82.62:  20%|██        | 4/20 [02:22<09:11, 34.45s/it]
+Task 2, Epoch 5/20 => Loss 0.194, Train_accy 84.10:  20%|██        | 4/20 [02:55<09:11, 34.45s/it]
+Task 2, Epoch 5/20 => Loss 0.194, Train_accy 84.10:  25%|██▌       | 5/20 [02:55<08:28, 33.93s/it]
+Task 2, Epoch 6/20 => Loss 0.196, Train_accy 84.94, Test_accy 95.53:  25%|██▌       | 5/20 [03:40<08:28, 33.93s/it]
+Task 2, Epoch 6/20 => Loss 0.196, Train_accy 84.94, Test_accy 95.53:  30%|███       | 6/20 [03:40<08:44, 37.48s/it]
+Task 2, Epoch 7/20 => Loss 0.218, Train_accy 84.70:  30%|███       | 6/20 [04:12<08:44, 37.48s/it]                 
+Task 2, Epoch 7/20 => Loss 0.218, Train_accy 84.70:  35%|███▌      | 7/20 [04:12<07:46, 35.89s/it]
+Task 2, Epoch 8/20 => Loss 0.197, Train_accy 85.48:  35%|███▌      | 7/20 [04:45<07:46, 35.89s/it]
+Task 2, Epoch 8/20 => Loss 0.197, Train_accy 85.48:  40%|████      | 8/20 [04:45<06:58, 34.85s/it]
+Task 2, Epoch 9/20 => Loss 0.184, Train_accy 86.34:  40%|████      | 8/20 [05:18<06:58, 34.85s/it]
+Task 2, Epoch 9/20 => Loss 0.184, Train_accy 86.34:  45%|████▌     | 9/20 [05:18<06:16, 34.24s/it]
+Task 2, Epoch 10/20 => Loss 0.192, Train_accy 85.68:  45%|████▌     | 9/20 [05:50<06:16, 34.24s/it]
+Task 2, Epoch 10/20 => Loss 0.192, Train_accy 85.68:  50%|█████     | 10/20 [05:50<05:36, 33.65s/it]
+Task 2, Epoch 11/20 => Loss 0.182, Train_accy 86.74, Test_accy 95.80:  50%|█████     | 10/20 [06:35<05:36, 33.65s/it]
+Task 2, Epoch 11/20 => Loss 0.182, Train_accy 86.74, Test_accy 95.80:  55%|█████▌    | 11/20 [06:35<05:32, 36.97s/it]
+Task 2, Epoch 12/20 => Loss 0.190, Train_accy 86.50:  55%|█████▌    | 11/20 [07:07<05:32, 36.97s/it]                 
+Task 2, Epoch 12/20 => Loss 0.190, Train_accy 86.50:  60%|██████    | 12/20 [07:07<04:43, 35.47s/it]
+Task 2, Epoch 13/20 => Loss 0.207, Train_accy 87.12:  60%|██████    | 12/20 [07:39<04:43, 35.47s/it]
+Task 2, Epoch 13/20 => Loss 0.207, Train_accy 87.12:  65%|██████▌   | 13/20 [07:39<04:02, 34.66s/it]
+Task 2, Epoch 14/20 => Loss 0.179, Train_accy 85.78:  65%|██████▌   | 13/20 [08:12<04:02, 34.66s/it]
+Task 2, Epoch 14/20 => Loss 0.179, Train_accy 85.78:  70%|███████   | 14/20 [08:12<03:23, 33.90s/it]
+Task 2, Epoch 15/20 => Loss 0.175, Train_accy 87.28:  70%|███████   | 14/20 [08:44<03:23, 33.90s/it]
+Task 2, Epoch 15/20 => Loss 0.175, Train_accy 87.28:  75%|███████▌  | 15/20 [08:44<02:47, 33.58s/it]
+Task 2, Epoch 16/20 => Loss 0.181, Train_accy 87.58, Test_accy 96.17:  75%|███████▌  | 15/20 [09:31<02:47, 33.58s/it]
+Task 2, Epoch 16/20 => Loss 0.181, Train_accy 87.58, Test_accy 96.17:  80%|████████  | 16/20 [09:31<02:30, 37.52s/it]
+Task 2, Epoch 17/20 => Loss 0.178, Train_accy 87.44:  80%|████████  | 16/20 [10:04<02:30, 37.52s/it]                 
+Task 2, Epoch 17/20 => Loss 0.178, Train_accy 87.44:  85%|████████▌ | 17/20 [10:04<01:48, 36.25s/it]
+Task 2, Epoch 18/20 => Loss 0.169, Train_accy 88.34:  85%|████████▌ | 17/20 [10:37<01:48, 36.25s/it]
+Task 2, Epoch 18/20 => Loss 0.169, Train_accy 88.34:  90%|█████████ | 18/20 [10:37<01:10, 35.14s/it]
+Task 2, Epoch 19/20 => Loss 0.168, Train_accy 88.92:  90%|█████████ | 18/20 [11:10<01:10, 35.14s/it]
+Task 2, Epoch 19/20 => Loss 0.168, Train_accy 88.92:  95%|█████████▌| 19/20 [11:10<00:34, 34.40s/it]
+Task 2, Epoch 20/20 => Loss 0.146, Train_accy 89.62:  95%|█████████▌| 19/20 [11:42<00:34, 34.40s/it]
+Task 2, Epoch 20/20 => Loss 0.146, Train_accy 89.62: 100%|██████████| 20/20 [11:42<00:00, 33.91s/it]
+Task 2, Epoch 20/20 => Loss 0.146, Train_accy 89.62: 100%|██████████| 20/20 [11:42<00:00, 35.14s/it]
+2024-09-21 00:05:03,844 [finetune.py] => Task 2, Epoch 20/20 => Loss 0.146, Train_accy 89.62
+2024-09-21 00:05:18,295 [trainer.py] => No NME accuracy.
+2024-09-21 00:05:18,296 [trainer.py] => CNN: {'total': np.float64(95.67), '00-09': np.float64(91.7), '10-19': np.float64(97.5), '20-29': np.float64(97.8), 'old': np.float64(94.6), 'new': np.float64(97.8)}
+2024-09-21 00:05:18,296 [trainer.py] => CNN top1 curve: [np.float64(97.3), np.float64(96.35), np.float64(95.67)]
+2024-09-21 00:05:18,296 [trainer.py] => CNN top5 curve: [np.float64(100.0), np.float64(99.9), np.float64(99.7)]
+
+Average Accuracy (CNN): 96.44
+2024-09-21 00:05:18,296 [trainer.py] => Average Accuracy (CNN): 96.44 
+
+task 3
+2024-09-21 00:05:18,297 [trainer.py] => All params: 171643473
+2024-09-21 00:05:18,298 [trainer.py] => Trainable params: 46161
+2024-09-21 00:05:18,301 [finetune.py] => Learning on 30-40
+2024-09-21 00:05:19,320 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2024-09-21 00:05:19,438 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./CF100-1/
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+Task 3, Epoch 1/20 => Loss 0.544, Train_accy 57.32, Test_accy 92.72:   0%|          | 0/20 [00:50<?, ?it/s]
+Task 3, Epoch 1/20 => Loss 0.544, Train_accy 57.32, Test_accy 92.72:   5%|▌         | 1/20 [00:50<15:58, 50.47s/it]
+Task 3, Epoch 2/20 => Loss 0.213, Train_accy 83.00:   5%|▌         | 1/20 [01:24<15:58, 50.47s/it]                 
+Task 3, Epoch 2/20 => Loss 0.213, Train_accy 83.00:  10%|█         | 2/20 [01:24<12:09, 40.55s/it]
+Task 3, Epoch 3/20 => Loss 0.186, Train_accy 83.50:  10%|█         | 2/20 [01:58<12:09, 40.55s/it]
+Task 3, Epoch 3/20 => Loss 0.186, Train_accy 83.50:  15%|█▌        | 3/20 [01:58<10:40, 37.66s/it]
+Task 3, Epoch 4/20 => Loss 0.187, Train_accy 83.00:  15%|█▌        | 3/20 [02:32<10:40, 37.66s/it]
+Task 3, Epoch 4/20 => Loss 0.187, Train_accy 83.00:  20%|██        | 4/20 [02:32<09:37, 36.10s/it]
+Task 3, Epoch 5/20 => Loss 0.177, Train_accy 83.34:  20%|██        | 4/20 [03:05<09:37, 36.10s/it]
+Task 3, Epoch 5/20 => Loss 0.177, Train_accy 83.34:  25%|██▌       | 5/20 [03:05<08:49, 35.33s/it]
+Task 3, Epoch 6/20 => Loss 0.178, Train_accy 83.30, Test_accy 93.92:  25%|██▌       | 5/20 [03:56<08:49, 35.33s/it]
+Task 3, Epoch 6/20 => Loss 0.178, Train_accy 83.30, Test_accy 93.92:  30%|███       | 6/20 [03:56<09:27, 40.57s/it]
+Task 3, Epoch 7/20 => Loss 0.180, Train_accy 83.74:  30%|███       | 6/20 [04:31<09:27, 40.57s/it]                 
+Task 3, Epoch 7/20 => Loss 0.180, Train_accy 83.74:  35%|███▌      | 7/20 [04:31<08:24, 38.82s/it]
+Task 3, Epoch 8/20 => Loss 0.178, Train_accy 83.64:  35%|███▌      | 7/20 [05:06<08:24, 38.82s/it]
+Task 3, Epoch 8/20 => Loss 0.178, Train_accy 83.64:  40%|████      | 8/20 [05:06<07:28, 37.38s/it]
+Task 3, Epoch 9/20 => Loss 0.173, Train_accy 84.66:  40%|████      | 8/20 [05:40<07:28, 37.38s/it]
+Task 3, Epoch 9/20 => Loss 0.173, Train_accy 84.66:  45%|████▌     | 9/20 [05:40<06:40, 36.42s/it]
+Task 3, Epoch 10/20 => Loss 0.170, Train_accy 84.92:  45%|████▌     | 9/20 [06:14<06:40, 36.42s/it]
+Task 3, Epoch 10/20 => Loss 0.170, Train_accy 84.92:  50%|█████     | 10/20 [06:14<05:56, 35.67s/it]
+Task 3, Epoch 11/20 => Loss 0.175, Train_accy 84.48, Test_accy 94.35:  50%|█████     | 10/20 [07:04<05:56, 35.67s/it]
+Task 3, Epoch 11/20 => Loss 0.175, Train_accy 84.48, Test_accy 94.35:  55%|█████▌    | 11/20 [07:04<06:00, 40.06s/it]
+Task 3, Epoch 12/20 => Loss 0.166, Train_accy 85.46:  55%|█████▌    | 11/20 [07:38<06:00, 40.06s/it]                 
+Task 3, Epoch 12/20 => Loss 0.166, Train_accy 85.46:  60%|██████    | 12/20 [07:38<05:06, 38.33s/it]
+Task 3, Epoch 13/20 => Loss 0.162, Train_accy 85.46:  60%|██████    | 12/20 [08:12<05:06, 38.33s/it]
+Task 3, Epoch 13/20 => Loss 0.162, Train_accy 85.46:  65%|██████▌   | 13/20 [08:12<04:18, 36.96s/it]
+Task 3, Epoch 14/20 => Loss 0.163, Train_accy 85.80:  65%|██████▌   | 13/20 [08:47<04:18, 36.96s/it]
+Task 3, Epoch 14/20 => Loss 0.163, Train_accy 85.80:  70%|███████   | 14/20 [08:47<03:37, 36.26s/it]
+Task 3, Epoch 15/20 => Loss 0.167, Train_accy 85.26:  70%|███████   | 14/20 [09:21<03:37, 36.26s/it]
+Task 3, Epoch 15/20 => Loss 0.167, Train_accy 85.26:  75%|███████▌  | 15/20 [09:21<02:57, 35.50s/it]
+Task 3, Epoch 16/20 => Loss 0.157, Train_accy 85.84, Test_accy 94.15:  75%|███████▌  | 15/20 [10:11<02:57, 35.50s/it]
+Task 3, Epoch 16/20 => Loss 0.157, Train_accy 85.84, Test_accy 94.15:  80%|████████  | 16/20 [10:11<02:40, 40.10s/it]
+Task 3, Epoch 17/20 => Loss 0.152, Train_accy 86.62:  80%|████████  | 16/20 [10:45<02:40, 40.10s/it]                 
+Task 3, Epoch 17/20 => Loss 0.152, Train_accy 86.62:  85%|████████▌ | 17/20 [10:45<01:54, 38.13s/it]
+Task 3, Epoch 18/20 => Loss 0.146, Train_accy 86.78:  85%|████████▌ | 17/20 [11:19<01:54, 38.13s/it]
+Task 3, Epoch 18/20 => Loss 0.146, Train_accy 86.78:  90%|█████████ | 18/20 [11:19<01:13, 36.82s/it]
+Task 3, Epoch 19/20 => Loss 0.143, Train_accy 87.88:  90%|█████████ | 18/20 [11:52<01:13, 36.82s/it]
+Task 3, Epoch 19/20 => Loss 0.143, Train_accy 87.88:  95%|█████████▌| 19/20 [11:52<00:35, 35.84s/it]
+Task 3, Epoch 20/20 => Loss 0.153, Train_accy 86.50:  95%|█████████▌| 19/20 [12:27<00:35, 35.84s/it]
+Task 3, Epoch 20/20 => Loss 0.153, Train_accy 86.50: 100%|██████████| 20/20 [12:27<00:00, 35.43s/it]
+Task 3, Epoch 20/20 => Loss 0.153, Train_accy 86.50: 100%|██████████| 20/20 [12:27<00:00, 37.36s/it]
+2024-09-21 00:17:47,018 [finetune.py] => Task 3, Epoch 20/20 => Loss 0.153, Train_accy 86.50
+2024-09-21 00:18:04,870 [trainer.py] => No NME accuracy.
+2024-09-21 00:18:04,870 [trainer.py] => CNN: {'total': np.float64(93.85), '00-09': np.float64(87.4), '10-19': np.float64(96.4), '20-29': np.float64(97.5), '30-39': np.float64(94.1), 'old': np.float64(93.77), 'new': np.float64(94.1)}
+2024-09-21 00:18:04,870 [trainer.py] => CNN top1 curve: [np.float64(97.3), np.float64(96.35), np.float64(95.67), np.float64(93.85)]
+2024-09-21 00:18:04,870 [trainer.py] => CNN top5 curve: [np.float64(100.0), np.float64(99.9), np.float64(99.7), np.float64(99.5)]
+
+Average Accuracy (CNN): 95.79249999999999
+2024-09-21 00:18:04,870 [trainer.py] => Average Accuracy (CNN): 95.79249999999999 
+
+task 4
+2024-09-21 00:18:04,872 [trainer.py] => All params: 171658853
+2024-09-21 00:18:04,873 [trainer.py] => Trainable params: 61541
+2024-09-21 00:18:04,874 [finetune.py] => Learning on 40-50
+2024-09-21 00:18:05,880 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2024-09-21 00:18:05,980 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./CF100-1/
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+Task 4, Epoch 1/20 => Loss 0.639, Train_accy 50.78, Test_accy 91.36:   0%|          | 0/20 [00:53<?, ?it/s]
+Task 4, Epoch 1/20 => Loss 0.639, Train_accy 50.78, Test_accy 91.36:   5%|▌         | 1/20 [00:53<17:04, 53.92s/it]
+Task 4, Epoch 2/20 => Loss 0.275, Train_accy 77.94:   5%|▌         | 1/20 [01:28<17:04, 53.92s/it]                 
+Task 4, Epoch 2/20 => Loss 0.275, Train_accy 77.94:  10%|█         | 2/20 [01:28<12:49, 42.73s/it]
+Task 4, Epoch 3/20 => Loss 0.294, Train_accy 75.96:  10%|█         | 2/20 [02:03<12:49, 42.73s/it]
+Task 4, Epoch 3/20 => Loss 0.294, Train_accy 75.96:  15%|█▌        | 3/20 [02:03<11:02, 38.95s/it]
+Task 4, Epoch 4/20 => Loss 0.267, Train_accy 77.82:  15%|█▌        | 3/20 [02:37<11:02, 38.95s/it]
+Task 4, Epoch 4/20 => Loss 0.267, Train_accy 77.82:  20%|██        | 4/20 [02:37<09:56, 37.25s/it]
+Task 4, Epoch 5/20 => Loss 0.262, Train_accy 77.34:  20%|██        | 4/20 [03:12<09:56, 37.25s/it]
+Task 4, Epoch 5/20 => Loss 0.262, Train_accy 77.34:  25%|██▌       | 5/20 [03:12<09:05, 36.34s/it]
+Task 4, Epoch 6/20 => Loss 0.260, Train_accy 77.46, Test_accy 92.56:  25%|██▌       | 5/20 [04:06<09:05, 36.34s/it]
+Task 4, Epoch 6/20 => Loss 0.260, Train_accy 77.46, Test_accy 92.56:  30%|███       | 6/20 [04:06<09:49, 42.14s/it]
+Task 4, Epoch 7/20 => Loss 0.231, Train_accy 78.60:  30%|███       | 6/20 [04:41<09:49, 42.14s/it]                 
+Task 4, Epoch 7/20 => Loss 0.231, Train_accy 78.60:  35%|███▌      | 7/20 [04:41<08:37, 39.79s/it]
+Task 4, Epoch 8/20 => Loss 0.236, Train_accy 78.96:  35%|███▌      | 7/20 [05:15<08:37, 39.79s/it]
+Task 4, Epoch 8/20 => Loss 0.236, Train_accy 78.96:  40%|████      | 8/20 [05:15<07:36, 38.06s/it]
+Task 4, Epoch 9/20 => Loss 0.232, Train_accy 78.84:  40%|████      | 8/20 [05:51<07:36, 38.06s/it]
+Task 4, Epoch 9/20 => Loss 0.232, Train_accy 78.84:  45%|████▌     | 9/20 [05:51<06:52, 37.54s/it]
+Task 4, Epoch 10/20 => Loss 0.234, Train_accy 79.82:  45%|████▌     | 9/20 [06:26<06:52, 37.54s/it]
+Task 4, Epoch 10/20 => Loss 0.234, Train_accy 79.82:  50%|█████     | 10/20 [06:26<06:06, 36.69s/it]
+Task 4, Epoch 11/20 => Loss 0.233, Train_accy 79.84, Test_accy 92.64:  50%|█████     | 10/20 [07:20<06:06, 36.69s/it]
+Task 4, Epoch 11/20 => Loss 0.233, Train_accy 79.84, Test_accy 92.64:  55%|█████▌    | 11/20 [07:20<06:17, 42.00s/it]
+Task 4, Epoch 12/20 => Loss 0.219, Train_accy 80.56:  55%|█████▌    | 11/20 [07:55<06:17, 42.00s/it]                 
+Task 4, Epoch 12/20 => Loss 0.219, Train_accy 80.56:  60%|██████    | 12/20 [07:55<05:19, 39.99s/it]
+Task 4, Epoch 13/20 => Loss 0.236, Train_accy 80.08:  60%|██████    | 12/20 [08:30<05:19, 39.99s/it]
+Task 4, Epoch 13/20 => Loss 0.236, Train_accy 80.08:  65%|██████▌   | 13/20 [08:30<04:29, 38.47s/it]
+Task 4, Epoch 14/20 => Loss 0.244, Train_accy 79.96:  65%|██████▌   | 13/20 [09:06<04:29, 38.47s/it]
+Task 4, Epoch 14/20 => Loss 0.244, Train_accy 79.96:  70%|███████   | 14/20 [09:06<03:46, 37.71s/it]
+Task 4, Epoch 15/20 => Loss 0.202, Train_accy 79.96:  70%|███████   | 14/20 [09:42<03:46, 37.71s/it]
+Task 4, Epoch 15/20 => Loss 0.202, Train_accy 79.96:  75%|███████▌  | 15/20 [09:42<03:05, 37.02s/it]
+Task 4, Epoch 16/20 => Loss 0.224, Train_accy 79.34, Test_accy 92.58:  75%|███████▌  | 15/20 [10:35<03:05, 37.02s/it]
+Task 4, Epoch 16/20 => Loss 0.224, Train_accy 79.34, Test_accy 92.58:  80%|████████  | 16/20 [10:35<02:48, 42.02s/it]
+Task 4, Epoch 17/20 => Loss 0.215, Train_accy 81.12:  80%|████████  | 16/20 [11:11<02:48, 42.02s/it]                 
+Task 4, Epoch 17/20 => Loss 0.215, Train_accy 81.12:  85%|████████▌ | 17/20 [11:11<02:00, 40.21s/it]
+Task 4, Epoch 18/20 => Loss 0.198, Train_accy 81.18:  85%|████████▌ | 17/20 [11:47<02:00, 40.21s/it]
+Task 4, Epoch 18/20 => Loss 0.198, Train_accy 81.18:  90%|█████████ | 18/20 [11:47<01:17, 38.69s/it]
+Task 4, Epoch 19/20 => Loss 0.202, Train_accy 81.48:  90%|█████████ | 18/20 [12:22<01:17, 38.69s/it]
+Task 4, Epoch 19/20 => Loss 0.202, Train_accy 81.48:  95%|█████████▌| 19/20 [12:22<00:37, 37.75s/it]
+Task 4, Epoch 20/20 => Loss 0.206, Train_accy 82.12:  95%|█████████▌| 19/20 [12:58<00:37, 37.75s/it]
+Task 4, Epoch 20/20 => Loss 0.206, Train_accy 82.12: 100%|██████████| 20/20 [12:58<00:00, 37.07s/it]
+Task 4, Epoch 20/20 => Loss 0.206, Train_accy 82.12: 100%|██████████| 20/20 [12:58<00:00, 38.91s/it]
+2024-09-21 00:31:04,467 [finetune.py] => Task 4, Epoch 20/20 => Loss 0.206, Train_accy 82.12
+2024-09-21 00:31:26,572 [trainer.py] => No NME accuracy.
+2024-09-21 00:31:26,577 [trainer.py] => CNN: {'total': np.float64(92.5), '00-09': np.float64(86.2), '10-19': np.float64(94.4), '20-29': np.float64(95.7), '30-39': np.float64(93.6), '40-49': np.float64(92.6), 'old': np.float64(92.48), 'new': np.float64(92.6)}
+2024-09-21 00:31:26,577 [trainer.py] => CNN top1 curve: [np.float64(97.3), np.float64(96.35), np.float64(95.67), np.float64(93.85), np.float64(92.5)]
+2024-09-21 00:31:26,577 [trainer.py] => CNN top5 curve: [np.float64(100.0), np.float64(99.9), np.float64(99.7), np.float64(99.5), np.float64(99.26)]
+
+Average Accuracy (CNN): 95.13399999999999
+2024-09-21 00:31:26,577 [trainer.py] => Average Accuracy (CNN): 95.13399999999999 
+
+task 5
+2024-09-21 00:31:26,579 [trainer.py] => All params: 171674233
+2024-09-21 00:31:26,581 [trainer.py] => Trainable params: 76921
+2024-09-21 00:31:26,582 [finetune.py] => Learning on 50-60
+2024-09-21 00:31:27,617 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2024-09-21 00:31:27,721 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./CF100-1/
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+Task 5, Epoch 1/20 => Loss 0.604, Train_accy 53.00, Test_accy 91.28:   0%|          | 0/20 [00:57<?, ?it/s]
+Task 5, Epoch 1/20 => Loss 0.604, Train_accy 53.00, Test_accy 91.28:   5%|▌         | 1/20 [00:57<18:09, 57.35s/it]
+Task 5, Epoch 2/20 => Loss 0.255, Train_accy 78.56:   5%|▌         | 1/20 [01:34<18:09, 57.35s/it]                 
+Task 5, Epoch 2/20 => Loss 0.255, Train_accy 78.56:  10%|█         | 2/20 [01:34<13:33, 45.18s/it]
+Task 5, Epoch 3/20 => Loss 0.228, Train_accy 78.86:  10%|█         | 2/20 [02:10<13:33, 45.18s/it]
+Task 5, Epoch 3/20 => Loss 0.228, Train_accy 78.86:  15%|█▌        | 3/20 [02:10<11:38, 41.12s/it]
+Task 5, Epoch 4/20 => Loss 0.222, Train_accy 79.60:  15%|█▌        | 3/20 [02:45<11:38, 41.12s/it]
+Task 5, Epoch 4/20 => Loss 0.222, Train_accy 79.60:  20%|██        | 4/20 [02:45<10:20, 38.79s/it]
+Task 5, Epoch 5/20 => Loss 0.201, Train_accy 79.62:  20%|██        | 4/20 [03:22<10:20, 38.79s/it]
+Task 5, Epoch 5/20 => Loss 0.201, Train_accy 79.62:  25%|██▌       | 5/20 [03:22<09:32, 38.14s/it]
+Task 5, Epoch 6/20 => Loss 0.218, Train_accy 81.00, Test_accy 91.78:  25%|██▌       | 5/20 [04:21<09:32, 38.14s/it]
+Task 5, Epoch 6/20 => Loss 0.218, Train_accy 81.00, Test_accy 91.78:  30%|███       | 6/20 [04:21<10:31, 45.09s/it]
+Task 5, Epoch 7/20 => Loss 0.219, Train_accy 81.16:  30%|███       | 6/20 [04:57<10:31, 45.09s/it]                 
+Task 5, Epoch 7/20 => Loss 0.219, Train_accy 81.16:  35%|███▌      | 7/20 [04:57<09:10, 42.38s/it]
+Task 5, Epoch 8/20 => Loss 0.197, Train_accy 81.08:  35%|███▌      | 7/20 [05:34<09:10, 42.38s/it]
+Task 5, Epoch 8/20 => Loss 0.197, Train_accy 81.08:  40%|████      | 8/20 [05:34<08:07, 40.65s/it]
+Task 5, Epoch 9/20 => Loss 0.183, Train_accy 82.04:  40%|████      | 8/20 [06:11<08:07, 40.65s/it]
+Task 5, Epoch 9/20 => Loss 0.183, Train_accy 82.04:  45%|████▌     | 9/20 [06:11<07:14, 39.47s/it]
+Task 5, Epoch 10/20 => Loss 0.215, Train_accy 81.62:  45%|████▌     | 9/20 [06:48<07:14, 39.47s/it]
+Task 5, Epoch 10/20 => Loss 0.215, Train_accy 81.62:  50%|█████     | 10/20 [06:48<06:26, 38.64s/it]
+Task 5, Epoch 11/20 => Loss 0.195, Train_accy 81.28, Test_accy 91.98:  50%|█████     | 10/20 [07:47<06:26, 38.64s/it]
+Task 5, Epoch 11/20 => Loss 0.195, Train_accy 81.28, Test_accy 91.98:  55%|█████▌    | 11/20 [07:47<06:43, 44.81s/it]
+Task 5, Epoch 12/20 => Loss 0.191, Train_accy 82.40:  55%|█████▌    | 11/20 [08:22<06:43, 44.81s/it]                 
+Task 5, Epoch 12/20 => Loss 0.191, Train_accy 82.40:  60%|██████    | 12/20 [08:22<05:36, 42.02s/it]
+Task 5, Epoch 13/20 => Loss 0.182, Train_accy 81.56:  60%|██████    | 12/20 [08:59<05:36, 42.02s/it]
+Task 5, Epoch 13/20 => Loss 0.182, Train_accy 81.56:  65%|██████▌   | 13/20 [08:59<04:41, 40.24s/it]
+Task 5, Epoch 14/20 => Loss 0.181, Train_accy 83.56:  65%|██████▌   | 13/20 [09:35<04:41, 40.24s/it]
+Task 5, Epoch 14/20 => Loss 0.181, Train_accy 83.56:  70%|███████   | 14/20 [09:35<03:54, 39.00s/it]
+Task 5, Epoch 15/20 => Loss 0.193, Train_accy 82.80:  70%|███████   | 14/20 [10:11<03:54, 39.00s/it]
+Task 5, Epoch 15/20 => Loss 0.193, Train_accy 82.80:  75%|███████▌  | 15/20 [10:11<03:11, 38.28s/it]
+Task 5, Epoch 16/20 => Loss 0.159, Train_accy 83.98, Test_accy 91.65:  75%|███████▌  | 15/20 [11:10<03:11, 38.28s/it]
+Task 5, Epoch 16/20 => Loss 0.159, Train_accy 83.98, Test_accy 91.65:  80%|████████  | 16/20 [11:10<02:57, 44.38s/it]
+Task 5, Epoch 17/20 => Loss 0.178, Train_accy 83.38:  80%|████████  | 16/20 [11:46<02:57, 44.38s/it]                 
+Task 5, Epoch 17/20 => Loss 0.178, Train_accy 83.38:  85%|████████▌ | 17/20 [11:46<02:05, 41.78s/it]
+Task 5, Epoch 18/20 => Loss 0.179, Train_accy 83.68:  85%|████████▌ | 17/20 [12:23<02:05, 41.78s/it]
+Task 5, Epoch 18/20 => Loss 0.179, Train_accy 83.68:  90%|█████████ | 18/20 [12:23<01:20, 40.41s/it]
+Task 5, Epoch 19/20 => Loss 0.187, Train_accy 83.30:  90%|█████████ | 18/20 [13:00<01:20, 40.41s/it]
+Task 5, Epoch 19/20 => Loss 0.187, Train_accy 83.30:  95%|█████████▌| 19/20 [13:00<00:39, 39.43s/it]
+Task 5, Epoch 20/20 => Loss 0.187, Train_accy 83.80:  95%|█████████▌| 19/20 [13:36<00:39, 39.43s/it]
+Task 5, Epoch 20/20 => Loss 0.187, Train_accy 83.80: 100%|██████████| 20/20 [13:36<00:00, 38.53s/it]
+Task 5, Epoch 20/20 => Loss 0.187, Train_accy 83.80: 100%|██████████| 20/20 [13:36<00:00, 40.85s/it]
+2024-09-21 00:45:04,985 [finetune.py] => Task 5, Epoch 20/20 => Loss 0.187, Train_accy 83.80
+2024-09-21 00:45:31,749 [trainer.py] => No NME accuracy.
+2024-09-21 00:45:31,754 [trainer.py] => CNN: {'total': np.float64(91.45), '00-09': np.float64(84.6), '10-19': np.float64(93.7), '20-29': np.float64(95.4), '30-39': np.float64(93.0), '40-49': np.float64(87.7), '50-59': np.float64(94.3), 'old': np.float64(90.88), 'new': np.float64(94.3)}
+2024-09-21 00:45:31,754 [trainer.py] => CNN top1 curve: [np.float64(97.3), np.float64(96.35), np.float64(95.67), np.float64(93.85), np.float64(92.5), np.float64(91.45)]
+2024-09-21 00:45:31,754 [trainer.py] => CNN top5 curve: [np.float64(100.0), np.float64(99.9), np.float64(99.7), np.float64(99.5), np.float64(99.26), np.float64(99.08)]
+
+Average Accuracy (CNN): 94.52
+2024-09-21 00:45:31,754 [trainer.py] => Average Accuracy (CNN): 94.52 
+
+task 6
+2024-09-21 00:45:31,755 [trainer.py] => All params: 171689613
+2024-09-21 00:45:31,757 [trainer.py] => Trainable params: 92301
+2024-09-21 00:45:31,758 [finetune.py] => Learning on 60-70
+2024-09-21 00:45:32,774 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2024-09-21 00:45:32,902 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./CF100-1/
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+Task 6, Epoch 1/20 => Loss 0.573, Train_accy 42.78, Test_accy 89.19:   0%|          | 0/20 [01:04<?, ?it/s]
+Task 6, Epoch 1/20 => Loss 0.573, Train_accy 42.78, Test_accy 89.19:   5%|▌         | 1/20 [01:04<20:20, 64.22s/it]
+Task 6, Epoch 2/20 => Loss 0.268, Train_accy 69.76:   5%|▌         | 1/20 [01:40<20:20, 64.22s/it]                 
+Task 6, Epoch 2/20 => Loss 0.268, Train_accy 69.76:  10%|█         | 2/20 [01:40<14:19, 47.73s/it]
+Task 6, Epoch 3/20 => Loss 0.231, Train_accy 69.24:  10%|█         | 2/20 [02:17<14:19, 47.73s/it]
+Task 6, Epoch 3/20 => Loss 0.231, Train_accy 69.24:  15%|█▌        | 3/20 [02:17<12:09, 42.93s/it]
+Task 6, Epoch 4/20 => Loss 0.215, Train_accy 68.90:  15%|█▌        | 3/20 [02:54<12:09, 42.93s/it]
+Task 6, Epoch 4/20 => Loss 0.215, Train_accy 68.90:  20%|██        | 4/20 [02:54<10:51, 40.71s/it]
+Task 6, Epoch 5/20 => Loss 0.222, Train_accy 70.48:  20%|██        | 4/20 [03:33<10:51, 40.71s/it]
+Task 6, Epoch 5/20 => Loss 0.222, Train_accy 70.48:  25%|██▌       | 5/20 [03:33<09:56, 39.76s/it]
+Task 6, Epoch 6/20 => Loss 0.234, Train_accy 70.12, Test_accy 89.83:  25%|██▌       | 5/20 [04:35<09:56, 39.76s/it]
+Task 6, Epoch 6/20 => Loss 0.234, Train_accy 70.12, Test_accy 89.83:  30%|███       | 6/20 [04:35<11:05, 47.51s/it]
+Task 6, Epoch 7/20 => Loss 0.212, Train_accy 70.82:  30%|███       | 6/20 [05:12<11:05, 47.51s/it]                 
+Task 6, Epoch 7/20 => Loss 0.212, Train_accy 70.82:  35%|███▌      | 7/20 [05:12<09:34, 44.20s/it]
+Task 6, Epoch 8/20 => Loss 0.201, Train_accy 71.50:  35%|███▌      | 7/20 [05:50<09:34, 44.20s/it]
+Task 6, Epoch 8/20 => Loss 0.201, Train_accy 71.50:  40%|████      | 8/20 [05:50<08:24, 42.08s/it]
+Task 6, Epoch 9/20 => Loss 0.229, Train_accy 71.52:  40%|████      | 8/20 [06:28<08:24, 42.08s/it]
+Task 6, Epoch 9/20 => Loss 0.229, Train_accy 71.52:  45%|████▌     | 9/20 [06:28<07:27, 40.68s/it]
+Task 6, Epoch 10/20 => Loss 0.213, Train_accy 74.16:  45%|████▌     | 9/20 [07:05<07:27, 40.68s/it]
+Task 6, Epoch 10/20 => Loss 0.213, Train_accy 74.16:  50%|█████     | 10/20 [07:05<06:35, 39.59s/it]
+Task 6, Epoch 11/20 => Loss 0.191, Train_accy 74.02, Test_accy 90.13:  50%|█████     | 10/20 [08:09<06:35, 39.59s/it]
+Task 6, Epoch 11/20 => Loss 0.191, Train_accy 74.02, Test_accy 90.13:  55%|█████▌    | 11/20 [08:09<07:03, 47.10s/it]
+Task 6, Epoch 12/20 => Loss 0.181, Train_accy 74.38:  55%|█████▌    | 11/20 [08:46<07:03, 47.10s/it]                 
+Task 6, Epoch 12/20 => Loss 0.181, Train_accy 74.38:  60%|██████    | 12/20 [08:46<05:53, 44.19s/it]
+Task 6, Epoch 13/20 => Loss 0.192, Train_accy 75.94:  60%|██████    | 12/20 [09:24<05:53, 44.19s/it]
+Task 6, Epoch 13/20 => Loss 0.192, Train_accy 75.94:  65%|██████▌   | 13/20 [09:24<04:54, 42.05s/it]
+Task 6, Epoch 14/20 => Loss 0.190, Train_accy 75.34:  65%|██████▌   | 13/20 [10:02<04:54, 42.05s/it]
+Task 6, Epoch 14/20 => Loss 0.190, Train_accy 75.34:  70%|███████   | 14/20 [10:02<04:05, 40.84s/it]
+Task 6, Epoch 15/20 => Loss 0.194, Train_accy 76.08:  70%|███████   | 14/20 [10:39<04:05, 40.84s/it]
+Task 6, Epoch 15/20 => Loss 0.194, Train_accy 76.08:  75%|███████▌  | 15/20 [10:39<03:19, 39.93s/it]
+Task 6, Epoch 16/20 => Loss 0.184, Train_accy 75.32, Test_accy 90.19:  75%|███████▌  | 15/20 [11:41<03:19, 39.93s/it]
+Task 6, Epoch 16/20 => Loss 0.184, Train_accy 75.32, Test_accy 90.19:  80%|████████  | 16/20 [11:41<03:05, 46.34s/it]
+Task 6, Epoch 17/20 => Loss 0.182, Train_accy 76.50:  80%|████████  | 16/20 [12:18<03:05, 46.34s/it]                 
+Task 6, Epoch 17/20 => Loss 0.182, Train_accy 76.50:  85%|████████▌ | 17/20 [12:18<02:10, 43.58s/it]
+Task 6, Epoch 18/20 => Loss 0.200, Train_accy 76.98:  85%|████████▌ | 17/20 [12:55<02:10, 43.58s/it]
+Task 6, Epoch 18/20 => Loss 0.200, Train_accy 76.98:  90%|█████████ | 18/20 [12:55<01:23, 41.61s/it]
+Task 6, Epoch 19/20 => Loss 0.173, Train_accy 77.20:  90%|█████████ | 18/20 [13:33<01:23, 41.61s/it]
+Task 6, Epoch 19/20 => Loss 0.173, Train_accy 77.20:  95%|█████████▌| 19/20 [13:33<00:40, 40.67s/it]
+Task 6, Epoch 20/20 => Loss 0.179, Train_accy 77.90:  95%|█████████▌| 19/20 [14:10<00:40, 40.67s/it]
+Task 6, Epoch 20/20 => Loss 0.179, Train_accy 77.90: 100%|██████████| 20/20 [14:10<00:00, 39.59s/it]
+Task 6, Epoch 20/20 => Loss 0.179, Train_accy 77.90: 100%|██████████| 20/20 [14:10<00:00, 42.54s/it]
+2024-09-21 00:59:44,122 [finetune.py] => Task 6, Epoch 20/20 => Loss 0.179, Train_accy 77.90
+2024-09-21 01:00:14,235 [trainer.py] => No NME accuracy.
+2024-09-21 01:00:14,235 [trainer.py] => CNN: {'total': np.float64(89.97), '00-09': np.float64(84.6), '10-19': np.float64(92.7), '20-29': np.float64(91.7), '30-39': np.float64(91.5), '40-49': np.float64(86.7), '50-59': np.float64(93.5), '60-69': np.float64(89.1), 'old': np.float64(90.12), 'new': np.float64(89.1)}
+2024-09-21 01:00:14,235 [trainer.py] => CNN top1 curve: [np.float64(97.3), np.float64(96.35), np.float64(95.67), np.float64(93.85), np.float64(92.5), np.float64(91.45), np.float64(89.97)]
+2024-09-21 01:00:14,236 [trainer.py] => CNN top5 curve: [np.float64(100.0), np.float64(99.9), np.float64(99.7), np.float64(99.5), np.float64(99.26), np.float64(99.08), np.float64(98.93)]
+
+Average Accuracy (CNN): 93.87
+2024-09-21 01:00:14,236 [trainer.py] => Average Accuracy (CNN): 93.87 
+
+task 7
+2024-09-21 01:00:14,237 [trainer.py] => All params: 171704993
+2024-09-21 01:00:14,239 [trainer.py] => Trainable params: 107681
+2024-09-21 01:00:14,240 [finetune.py] => Learning on 70-80
+2024-09-21 01:00:15,280 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2024-09-21 01:00:15,399 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./CF100-1/
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+Task 7, Epoch 1/20 => Loss 0.520, Train_accy 43.90, Test_accy 87.38:   0%|          | 0/20 [01:07<?, ?it/s]
+Task 7, Epoch 1/20 => Loss 0.520, Train_accy 43.90, Test_accy 87.38:   5%|▌         | 1/20 [01:07<21:25, 67.67s/it]
+Task 7, Epoch 2/20 => Loss 0.209, Train_accy 73.72:   5%|▌         | 1/20 [01:46<21:25, 67.67s/it]                 
+Task 7, Epoch 2/20 => Loss 0.209, Train_accy 73.72:  10%|█         | 2/20 [01:46<15:08, 50.49s/it]
+Task 7, Epoch 3/20 => Loss 0.187, Train_accy 72.70:  10%|█         | 2/20 [02:24<15:08, 50.49s/it]
+Task 7, Epoch 3/20 => Loss 0.187, Train_accy 72.70:  15%|█▌        | 3/20 [02:24<12:42, 44.86s/it]
+Task 7, Epoch 4/20 => Loss 0.174, Train_accy 73.04:  15%|█▌        | 3/20 [03:03<12:42, 44.86s/it]
+Task 7, Epoch 4/20 => Loss 0.174, Train_accy 73.04:  20%|██        | 4/20 [03:03<11:19, 42.45s/it]
+Task 7, Epoch 5/20 => Loss 0.162, Train_accy 73.34:  20%|██        | 4/20 [03:42<11:19, 42.45s/it]
+Task 7, Epoch 5/20 => Loss 0.162, Train_accy 73.34:  25%|██▌       | 5/20 [03:42<10:19, 41.31s/it]
+Task 7, Epoch 6/20 => Loss 0.179, Train_accy 73.64, Test_accy 88.25:  25%|██▌       | 5/20 [04:48<10:19, 41.31s/it]
+Task 7, Epoch 6/20 => Loss 0.179, Train_accy 73.64, Test_accy 88.25:  30%|███       | 6/20 [04:48<11:37, 49.79s/it]
+Task 7, Epoch 7/20 => Loss 0.151, Train_accy 74.08:  30%|███       | 6/20 [05:26<11:37, 49.79s/it]                 
+Task 7, Epoch 7/20 => Loss 0.151, Train_accy 74.08:  35%|███▌      | 7/20 [05:26<09:55, 45.80s/it]
+Task 7, Epoch 8/20 => Loss 0.172, Train_accy 74.98:  35%|███▌      | 7/20 [06:05<09:55, 45.80s/it]
+Task 7, Epoch 8/20 => Loss 0.172, Train_accy 74.98:  40%|████      | 8/20 [06:05<08:44, 43.72s/it]
+Task 7, Epoch 9/20 => Loss 0.170, Train_accy 74.70:  40%|████      | 8/20 [06:44<08:44, 43.72s/it]
+Task 7, Epoch 9/20 => Loss 0.170, Train_accy 74.70:  45%|████▌     | 9/20 [06:44<07:44, 42.26s/it]
+Task 7, Epoch 10/20 => Loss 0.158, Train_accy 74.14:  45%|████▌     | 9/20 [07:24<07:44, 42.26s/it]
+Task 7, Epoch 10/20 => Loss 0.158, Train_accy 74.14:  50%|█████     | 10/20 [07:24<06:55, 41.54s/it]
+Task 7, Epoch 11/20 => Loss 0.156, Train_accy 75.68, Test_accy 88.52:  50%|█████     | 10/20 [08:32<06:55, 41.54s/it]
+Task 7, Epoch 11/20 => Loss 0.156, Train_accy 75.68, Test_accy 88.52:  55%|█████▌    | 11/20 [08:32<07:27, 49.73s/it]
+Task 7, Epoch 12/20 => Loss 0.138, Train_accy 76.80:  55%|█████▌    | 11/20 [09:10<07:27, 49.73s/it]                 
+Task 7, Epoch 12/20 => Loss 0.138, Train_accy 76.80:  60%|██████    | 12/20 [09:10<06:09, 46.23s/it]
+Task 7, Epoch 13/20 => Loss 0.146, Train_accy 76.18:  60%|██████    | 12/20 [09:49<06:09, 46.23s/it]
+Task 7, Epoch 13/20 => Loss 0.146, Train_accy 76.18:  65%|██████▌   | 13/20 [09:49<05:07, 43.95s/it]
+Task 7, Epoch 14/20 => Loss 0.138, Train_accy 77.32:  65%|██████▌   | 13/20 [10:28<05:07, 43.95s/it]
+Task 7, Epoch 14/20 => Loss 0.138, Train_accy 77.32:  70%|███████   | 14/20 [10:28<04:14, 42.45s/it]
+Task 7, Epoch 15/20 => Loss 0.124, Train_accy 77.32:  70%|███████   | 14/20 [11:06<04:14, 42.45s/it]
+Task 7, Epoch 15/20 => Loss 0.124, Train_accy 77.32:  75%|███████▌  | 15/20 [11:06<03:25, 41.10s/it]
+Task 7, Epoch 16/20 => Loss 0.150, Train_accy 77.10, Test_accy 88.48:  75%|███████▌  | 15/20 [12:13<03:25, 41.10s/it]
+Task 7, Epoch 16/20 => Loss 0.150, Train_accy 77.10, Test_accy 88.48:  80%|████████  | 16/20 [12:13<03:15, 48.90s/it]
+Task 7, Epoch 17/20 => Loss 0.141, Train_accy 77.16:  80%|████████  | 16/20 [12:52<03:15, 48.90s/it]                 
+Task 7, Epoch 17/20 => Loss 0.141, Train_accy 77.16:  85%|████████▌ | 17/20 [12:52<02:17, 45.76s/it]
+Task 7, Epoch 18/20 => Loss 0.131, Train_accy 77.28:  85%|████████▌ | 17/20 [13:31<02:17, 45.76s/it]
+Task 7, Epoch 18/20 => Loss 0.131, Train_accy 77.28:  90%|█████████ | 18/20 [13:31<01:27, 43.89s/it]
+Task 7, Epoch 19/20 => Loss 0.137, Train_accy 76.94:  90%|█████████ | 18/20 [14:09<01:27, 43.89s/it]
+Task 7, Epoch 19/20 => Loss 0.137, Train_accy 76.94:  95%|█████████▌| 19/20 [14:09<00:42, 42.12s/it]
+Task 7, Epoch 20/20 => Loss 0.133, Train_accy 77.76:  95%|█████████▌| 19/20 [14:48<00:42, 42.12s/it]
+Task 7, Epoch 20/20 => Loss 0.133, Train_accy 77.76: 100%|██████████| 20/20 [14:48<00:00, 41.26s/it]
+Task 7, Epoch 20/20 => Loss 0.133, Train_accy 77.76: 100%|██████████| 20/20 [14:48<00:00, 44.44s/it]
+2024-09-21 01:15:04,668 [finetune.py] => Task 7, Epoch 20/20 => Loss 0.133, Train_accy 77.76
+2024-09-21 01:15:39,775 [trainer.py] => No NME accuracy.
+2024-09-21 01:15:39,776 [trainer.py] => CNN: {'total': np.float64(88.7), '00-09': np.float64(82.2), '10-19': np.float64(92.6), '20-29': np.float64(91.0), '30-39': np.float64(90.2), '40-49': np.float64(86.3), '50-59': np.float64(92.9), '60-69': np.float64(87.1), '70-79': np.float64(87.3), 'old': np.float64(88.9), 'new': np.float64(87.3)}
+2024-09-21 01:15:39,776 [trainer.py] => CNN top1 curve: [np.float64(97.3), np.float64(96.35), np.float64(95.67), np.float64(93.85), np.float64(92.5), np.float64(91.45), np.float64(89.97), np.float64(88.7)]
+2024-09-21 01:15:39,776 [trainer.py] => CNN top5 curve: [np.float64(100.0), np.float64(99.9), np.float64(99.7), np.float64(99.5), np.float64(99.26), np.float64(99.08), np.float64(98.93), np.float64(98.9)]
+
+Average Accuracy (CNN): 93.22375000000001
+2024-09-21 01:15:39,776 [trainer.py] => Average Accuracy (CNN): 93.22375000000001 
+
+task 8
+2024-09-21 01:15:39,777 [trainer.py] => All params: 171720373
+2024-09-21 01:15:39,779 [trainer.py] => Trainable params: 123061
+2024-09-21 01:15:39,780 [finetune.py] => Learning on 80-90
+2024-09-21 01:15:40,803 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2024-09-21 01:15:40,882 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./CF100-1/
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+Task 8, Epoch 1/20 => Loss 0.594, Train_accy 44.66, Test_accy 86.71:   0%|          | 0/20 [01:12<?, ?it/s]
+Task 8, Epoch 1/20 => Loss 0.594, Train_accy 44.66, Test_accy 86.71:   5%|▌         | 1/20 [01:12<22:54, 72.34s/it]
+Task 8, Epoch 2/20 => Loss 0.235, Train_accy 74.22:   5%|▌         | 1/20 [01:51<22:54, 72.34s/it]                 
+Task 8, Epoch 2/20 => Loss 0.235, Train_accy 74.22:  10%|█         | 2/20 [01:51<15:49, 52.73s/it]
+Task 8, Epoch 3/20 => Loss 0.245, Train_accy 72.20:  10%|█         | 2/20 [02:31<15:49, 52.73s/it]
+Task 8, Epoch 3/20 => Loss 0.245, Train_accy 72.20:  15%|█▌        | 3/20 [02:31<13:18, 46.97s/it]
+Task 8, Epoch 4/20 => Loss 0.211, Train_accy 70.48:  15%|█▌        | 3/20 [03:11<13:18, 46.97s/it]
+Task 8, Epoch 4/20 => Loss 0.211, Train_accy 70.48:  20%|██        | 4/20 [03:11<11:44, 44.04s/it]
+Task 8, Epoch 5/20 => Loss 0.198, Train_accy 70.22:  20%|██        | 4/20 [03:51<11:44, 44.04s/it]
+Task 8, Epoch 5/20 => Loss 0.198, Train_accy 70.22:  25%|██▌       | 5/20 [03:51<10:42, 42.82s/it]
+Task 8, Epoch 6/20 => Loss 0.183, Train_accy 71.22, Test_accy 87.31:  25%|██▌       | 5/20 [05:03<10:42, 42.82s/it]
+Task 8, Epoch 6/20 => Loss 0.183, Train_accy 71.22, Test_accy 87.31:  30%|███       | 6/20 [05:03<12:19, 52.82s/it]
+Task 8, Epoch 7/20 => Loss 0.191, Train_accy 70.00:  30%|███       | 6/20 [05:44<12:19, 52.82s/it]                 
+Task 8, Epoch 7/20 => Loss 0.191, Train_accy 70.00:  35%|███▌      | 7/20 [05:44<10:32, 48.69s/it]
+Task 8, Epoch 8/20 => Loss 0.172, Train_accy 71.92:  35%|███▌      | 7/20 [06:22<10:32, 48.69s/it]
+Task 8, Epoch 8/20 => Loss 0.172, Train_accy 71.92:  40%|████      | 8/20 [06:23<09:06, 45.58s/it]
+Task 8, Epoch 9/20 => Loss 0.197, Train_accy 70.72:  40%|████      | 8/20 [07:02<09:06, 45.58s/it]
+Task 8, Epoch 9/20 => Loss 0.197, Train_accy 70.72:  45%|████▌     | 9/20 [07:02<07:59, 43.59s/it]
+Task 8, Epoch 10/20 => Loss 0.171, Train_accy 72.90:  45%|████▌     | 9/20 [07:42<07:59, 43.59s/it]
+Task 8, Epoch 10/20 => Loss 0.171, Train_accy 72.90:  50%|█████     | 10/20 [07:42<07:04, 42.47s/it]
+Task 8, Epoch 11/20 => Loss 0.181, Train_accy 71.54, Test_accy 87.46:  50%|█████     | 10/20 [08:53<07:04, 42.47s/it]
+Task 8, Epoch 11/20 => Loss 0.181, Train_accy 71.54, Test_accy 87.46:  55%|█████▌    | 11/20 [08:53<07:42, 51.39s/it]
+Task 8, Epoch 12/20 => Loss 0.175, Train_accy 73.00:  55%|█████▌    | 11/20 [09:33<07:42, 51.39s/it]                 
+Task 8, Epoch 12/20 => Loss 0.175, Train_accy 73.00:  60%|██████    | 12/20 [09:33<06:22, 47.87s/it]
+Task 8, Epoch 13/20 => Loss 0.178, Train_accy 73.48:  60%|██████    | 12/20 [10:13<06:22, 47.87s/it]
+Task 8, Epoch 13/20 => Loss 0.178, Train_accy 73.48:  65%|██████▌   | 13/20 [10:13<05:18, 45.43s/it]
+Task 8, Epoch 14/20 => Loss 0.182, Train_accy 71.82:  65%|██████▌   | 13/20 [10:52<05:18, 45.43s/it]
+Task 8, Epoch 14/20 => Loss 0.182, Train_accy 71.82:  70%|███████   | 14/20 [10:52<04:21, 43.55s/it]
+Task 8, Epoch 15/20 => Loss 0.166, Train_accy 74.26:  70%|███████   | 14/20 [11:33<04:21, 43.55s/it]
+Task 8, Epoch 15/20 => Loss 0.166, Train_accy 74.26:  75%|███████▌  | 15/20 [11:33<03:33, 42.60s/it]
+Task 8, Epoch 16/20 => Loss 0.165, Train_accy 74.48, Test_accy 87.50:  75%|███████▌  | 15/20 [12:45<03:33, 42.60s/it]
+Task 8, Epoch 16/20 => Loss 0.165, Train_accy 74.48, Test_accy 87.50:  80%|████████  | 16/20 [12:45<03:26, 51.58s/it]
+Task 8, Epoch 17/20 => Loss 0.163, Train_accy 73.50:  80%|████████  | 16/20 [13:25<03:26, 51.58s/it]                 
+Task 8, Epoch 17/20 => Loss 0.163, Train_accy 73.50:  85%|████████▌ | 17/20 [13:25<02:24, 48.15s/it]
+Task 8, Epoch 18/20 => Loss 0.154, Train_accy 74.24:  85%|████████▌ | 17/20 [14:05<02:24, 48.15s/it]
+Task 8, Epoch 18/20 => Loss 0.154, Train_accy 74.24:  90%|█████████ | 18/20 [14:05<01:31, 45.68s/it]
+Task 8, Epoch 19/20 => Loss 0.176, Train_accy 74.84:  90%|█████████ | 18/20 [14:45<01:31, 45.68s/it]
+Task 8, Epoch 19/20 => Loss 0.176, Train_accy 74.84:  95%|█████████▌| 19/20 [14:45<00:43, 43.88s/it]
+Task 8, Epoch 20/20 => Loss 0.174, Train_accy 73.26:  95%|█████████▌| 19/20 [15:25<00:43, 43.88s/it]
+Task 8, Epoch 20/20 => Loss 0.174, Train_accy 73.26: 100%|██████████| 20/20 [15:25<00:00, 42.68s/it]
+Task 8, Epoch 20/20 => Loss 0.174, Train_accy 73.26: 100%|██████████| 20/20 [15:25<00:00, 46.26s/it]
+2024-09-21 01:31:06,402 [finetune.py] => Task 8, Epoch 20/20 => Loss 0.174, Train_accy 73.26
+2024-09-21 01:31:46,596 [trainer.py] => No NME accuracy.
+2024-09-21 01:31:46,597 [trainer.py] => CNN: {'total': np.float64(87.46), '00-09': np.float64(79.9), '10-19': np.float64(91.0), '20-29': np.float64(90.2), '30-39': np.float64(88.9), '40-49': np.float64(85.4), '50-59': np.float64(93.4), '60-69': np.float64(86.5), '70-79': np.float64(85.1), '80-89': np.float64(86.7), 'old': np.float64(87.55), 'new': np.float64(86.7)}
+2024-09-21 01:31:46,597 [trainer.py] => CNN top1 curve: [np.float64(97.3), np.float64(96.35), np.float64(95.67), np.float64(93.85), np.float64(92.5), np.float64(91.45), np.float64(89.97), np.float64(88.7), np.float64(87.46)]
+2024-09-21 01:31:46,597 [trainer.py] => CNN top5 curve: [np.float64(100.0), np.float64(99.9), np.float64(99.7), np.float64(99.5), np.float64(99.26), np.float64(99.08), np.float64(98.93), np.float64(98.9), np.float64(98.83)]
+
+Average Accuracy (CNN): 92.58333333333334
+2024-09-21 01:31:46,597 [trainer.py] => Average Accuracy (CNN): 92.58333333333334 
+
+task 9
+2024-09-21 01:31:46,598 [trainer.py] => All params: 171735753
+2024-09-21 01:31:46,600 [trainer.py] => Trainable params: 138441
+2024-09-21 01:31:46,601 [finetune.py] => Learning on 90-100
+2024-09-21 01:31:47,619 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2024-09-21 01:31:47,731 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./CF100-1/
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+Task 9, Epoch 1/20 => Loss 0.558, Train_accy 49.24, Test_accy 86.53:   0%|          | 0/20 [01:16<?, ?it/s]
+Task 9, Epoch 1/20 => Loss 0.558, Train_accy 49.24, Test_accy 86.53:   5%|▌         | 1/20 [01:16<24:12, 76.43s/it]
+Task 9, Epoch 2/20 => Loss 0.231, Train_accy 78.30:   5%|▌         | 1/20 [01:57<24:12, 76.43s/it]                 
+Task 9, Epoch 2/20 => Loss 0.231, Train_accy 78.30:  10%|█         | 2/20 [01:57<16:42, 55.69s/it]
+Task 9, Epoch 3/20 => Loss 0.194, Train_accy 78.98:  10%|█         | 2/20 [02:37<16:42, 55.69s/it]
+Task 9, Epoch 3/20 => Loss 0.194, Train_accy 78.98:  15%|█▌        | 3/20 [02:37<13:47, 48.66s/it]
+Task 9, Epoch 4/20 => Loss 0.163, Train_accy 77.88:  15%|█▌        | 3/20 [03:18<13:47, 48.66s/it]
+Task 9, Epoch 4/20 => Loss 0.163, Train_accy 77.88:  20%|██        | 4/20 [03:18<12:07, 45.49s/it]
+Task 9, Epoch 5/20 => Loss 0.156, Train_accy 78.34:  20%|██        | 4/20 [03:59<12:07, 45.49s/it]
+Task 9, Epoch 5/20 => Loss 0.156, Train_accy 78.34:  25%|██▌       | 5/20 [03:59<10:59, 43.95s/it]
+Task 9, Epoch 6/20 => Loss 0.166, Train_accy 78.88, Test_accy 87.27:  25%|██▌       | 5/20 [05:16<10:59, 43.95s/it]
+Task 9, Epoch 6/20 => Loss 0.166, Train_accy 78.88, Test_accy 87.27:  30%|███       | 6/20 [05:16<12:53, 55.24s/it]
+Task 9, Epoch 7/20 => Loss 0.172, Train_accy 78.50:  30%|███       | 6/20 [05:57<12:53, 55.24s/it]                 
+Task 9, Epoch 7/20 => Loss 0.172, Train_accy 78.50:  35%|███▌      | 7/20 [05:57<10:57, 50.56s/it]
+Task 9, Epoch 8/20 => Loss 0.171, Train_accy 77.92:  35%|███▌      | 7/20 [06:38<10:57, 50.56s/it]
+Task 9, Epoch 8/20 => Loss 0.171, Train_accy 77.92:  40%|████      | 8/20 [06:38<09:30, 47.55s/it]
+Task 9, Epoch 9/20 => Loss 0.168, Train_accy 79.06:  40%|████      | 8/20 [07:19<09:30, 47.55s/it]
+Task 9, Epoch 9/20 => Loss 0.168, Train_accy 79.06:  45%|████▌     | 9/20 [07:19<08:19, 45.41s/it]
+Task 9, Epoch 10/20 => Loss 0.159, Train_accy 79.38:  45%|████▌     | 9/20 [08:00<08:19, 45.41s/it]
+Task 9, Epoch 10/20 => Loss 0.159, Train_accy 79.38:  50%|█████     | 10/20 [08:00<07:20, 44.05s/it]
+Task 9, Epoch 11/20 => Loss 0.152, Train_accy 79.08, Test_accy 87.44:  50%|█████     | 10/20 [09:17<07:20, 44.05s/it]
+Task 9, Epoch 11/20 => Loss 0.152, Train_accy 79.08, Test_accy 87.44:  55%|█████▌    | 11/20 [09:17<08:06, 54.09s/it]
+Task 9, Epoch 12/20 => Loss 0.154, Train_accy 81.54:  55%|█████▌    | 11/20 [09:58<08:06, 54.09s/it]                 
+Task 9, Epoch 12/20 => Loss 0.154, Train_accy 81.54:  60%|██████    | 12/20 [09:58<06:40, 50.05s/it]
+Task 9, Epoch 13/20 => Loss 0.141, Train_accy 80.60:  60%|██████    | 12/20 [10:38<06:40, 50.05s/it]
+Task 9, Epoch 13/20 => Loss 0.141, Train_accy 80.60:  65%|██████▌   | 13/20 [10:38<05:29, 47.09s/it]
+Task 9, Epoch 14/20 => Loss 0.136, Train_accy 81.30:  65%|██████▌   | 13/20 [11:19<05:29, 47.09s/it]
+Task 9, Epoch 14/20 => Loss 0.136, Train_accy 81.30:  70%|███████   | 14/20 [11:19<04:30, 45.12s/it]
+Task 9, Epoch 15/20 => Loss 0.148, Train_accy 81.54:  70%|███████   | 14/20 [11:58<04:30, 45.12s/it]
+Task 9, Epoch 15/20 => Loss 0.148, Train_accy 81.54:  75%|███████▌  | 15/20 [11:58<03:37, 43.52s/it]
+Task 9, Epoch 16/20 => Loss 0.156, Train_accy 80.76, Test_accy 87.35:  75%|███████▌  | 15/20 [13:14<03:37, 43.52s/it]
+Task 9, Epoch 16/20 => Loss 0.156, Train_accy 80.76, Test_accy 87.35:  80%|████████  | 16/20 [13:14<03:32, 53.21s/it]
+Task 9, Epoch 17/20 => Loss 0.157, Train_accy 81.32:  80%|████████  | 16/20 [13:55<03:32, 53.21s/it]                 
+Task 9, Epoch 17/20 => Loss 0.157, Train_accy 81.32:  85%|████████▌ | 17/20 [13:55<02:28, 49.56s/it]
+Task 9, Epoch 18/20 => Loss 0.142, Train_accy 82.48:  85%|████████▌ | 17/20 [14:36<02:28, 49.56s/it]
+Task 9, Epoch 18/20 => Loss 0.142, Train_accy 82.48:  90%|█████████ | 18/20 [14:36<01:33, 46.77s/it]
+Task 9, Epoch 19/20 => Loss 0.139, Train_accy 82.02:  90%|█████████ | 18/20 [15:15<01:33, 46.77s/it]
+Task 9, Epoch 19/20 => Loss 0.139, Train_accy 82.02:  95%|█████████▌| 19/20 [15:15<00:44, 44.66s/it]
+Task 9, Epoch 20/20 => Loss 0.134, Train_accy 82.62:  95%|█████████▌| 19/20 [15:57<00:44, 44.66s/it]
+Task 9, Epoch 20/20 => Loss 0.134, Train_accy 82.62: 100%|██████████| 20/20 [15:57<00:00, 43.66s/it]
+Task 9, Epoch 20/20 => Loss 0.134, Train_accy 82.62: 100%|██████████| 20/20 [15:57<00:00, 47.85s/it]
+2024-09-21 01:47:45,211 [finetune.py] => Task 9, Epoch 20/20 => Loss 0.134, Train_accy 82.62
+2024-09-21 01:48:29,012 [trainer.py] => No NME accuracy.
+2024-09-21 01:48:29,013 [trainer.py] => CNN: {'total': np.float64(87.26), '00-09': np.float64(79.2), '10-19': np.float64(90.8), '20-29': np.float64(89.7), '30-39': np.float64(87.7), '40-49': np.float64(84.5), '50-59': np.float64(92.8), '60-69': np.float64(84.0), '70-79': np.float64(84.7), '80-89': np.float64(85.7), '90-99': np.float64(93.5), 'old': np.float64(86.57), 'new': np.float64(93.5)}
+2024-09-21 01:48:29,013 [trainer.py] => CNN top1 curve: [np.float64(97.3), np.float64(96.35), np.float64(95.67), np.float64(93.85), np.float64(92.5), np.float64(91.45), np.float64(89.97), np.float64(88.7), np.float64(87.46), np.float64(87.26)]
+2024-09-21 01:48:29,013 [trainer.py] => CNN top5 curve: [np.float64(100.0), np.float64(99.9), np.float64(99.7), np.float64(99.5), np.float64(99.26), np.float64(99.08), np.float64(98.93), np.float64(98.9), np.float64(98.83), np.float64(98.6)]
+
+Average Accuracy (CNN): 92.05100000000002
+2024-09-21 01:48:29,013 [trainer.py] => Average Accuracy (CNN): 92.05100000000002 
+
+Accuracy Matrix (CNN):
+[[97.3 95.1 91.7 87.4 86.2 84.6 84.6 82.2 79.9 79.2]
+ [ 0.  97.6 97.5 96.4 94.4 93.7 92.7 92.6 91.  90.8]
+ [ 0.   0.  97.8 97.5 95.7 95.4 91.7 91.  90.2 89.7]
+ [ 0.   0.   0.  94.1 93.6 93.  91.5 90.2 88.9 87.7]
+ [ 0.   0.   0.   0.  92.6 87.7 86.7 86.3 85.4 84.5]
+ [ 0.   0.   0.   0.   0.  94.3 93.5 92.9 93.4 92.8]
+ [ 0.   0.   0.   0.   0.   0.  89.1 87.1 86.5 84. ]
+ [ 0.   0.   0.   0.   0.   0.   0.  87.3 85.1 84.7]
+ [ 0.   0.   0.   0.   0.   0.   0.   0.  86.7 85.7]
+ [ 0.   0.   0.   0.   0.   0.   0.   0.   0.  93.5]]
+2024-09-21 01:48:29,014 [trainer.py] => Forgetting (CNN): 6.411111111111107
