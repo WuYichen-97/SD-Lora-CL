@@ -7,7 +7,7 @@ If you find this code useful in your research then please cite
 @article{wu2025SDLoRA,
   title={SD-LoRA: Scalable Decoupled Low-Rank Adaptation for Class Incremental Learning},
   author={Wu, Yichen and Piao, Hongming and Huang, Long-Kai and Wang, Renzhen and Li, Wanhua and Pfister, Hanspeter and Meng, Deyu and Ma, Kede and Wei, Ying},
-  journal={The Thirteenth International conference on learning representations},
+  journal={The Thirteenth International Conference on Learning Representations},
   year={2025}
 }
 ``` 
