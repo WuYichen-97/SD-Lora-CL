@@ -3,9 +3,9 @@
 Welcome to the official code repository for [SD-LoRA: Scalable Decoupled Low-Rank Adaptation for Class Incremental Learning **(ICLR 2025, Oral)**](https://openreview.net/pdf?id=5U1rlpX68A).
 
 If you find this code useful in your research then please cite  
-```bash
+```bibtex
 @article{wu2025SDLoRA,
-  title={SD-LoRA: Scalable Decoupled Low-Rank Adaptation {\textnormal{for}} Class Incremental Learning},
+  title={SD-LoRA: Scalable Decoupled Low-Rank Adaptation for Class Incremental Learning},
   author={Wu, Yichen and Piao, Hongming and Huang, Long-Kai and Wang, Renzhen and Li, Wanhua and Pfister, Hanspeter and Meng, Deyu and Ma, Kede and Wei, Ying},
   journal={The Thirteenth International Conference on Learning Representations},
   year={2025}
