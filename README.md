@@ -4,11 +4,13 @@ Welcome to the official code repository for [SD-LoRA: Scalable Decoupled Low-Ran
 
 If you find this code useful in your research then please cite  
 ```bibtex
-@article{wu2025SDLoRA,
-  title={SD-LoRA: Scalable Decoupled Low-Rank Adaptation for Class Incremental Learning},
-  author={Wu, Yichen and Piao, Hongming and Huang, Long-Kai and Wang, Renzhen and Li, Wanhua and Pfister, Hanspeter and Meng, Deyu and Ma, Kede and Wei, Ying},
-  journal={The Thirteenth International Conference on Learning Representations},
-  year={2025}
+@inproceedings{
+wu2025sdlora,
+title={{SD}-Lo{RA}: Scalable Decoupled Low-Rank Adaptation for Class Incremental Learning},
+author={Yichen Wu and Hongming Piao and Long-Kai Huang and Renzhen Wang and Wanhua Li and Hanspeter Pfister and Deyu Meng and Kede Ma and Ying Wei},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=5U1rlpX68A}
 }
 ``` 
 
