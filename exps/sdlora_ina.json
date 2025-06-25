@@ -14,7 +14,7 @@
     "scheduler": "constant",
 
     "filepath": "./ImageNetA/",
-    "seed": [1996],
+    "seed": [1993],
     "init_epoch": 20,
     "init_lr": 1e-2,
     "init_milestones": [10, 15],
