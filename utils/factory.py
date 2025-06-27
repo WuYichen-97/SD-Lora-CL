@@ -18,6 +18,8 @@ def get_model(model_name, args):
         from models.coda_prompt import Learner
     elif name == "finetune":
         from models.finetune import Learner
+    elif name == "sdlora":
+        from models.sdlora import Learner
     elif name == "icarl":
         from models.icarl import Learner
     elif name == "der":
