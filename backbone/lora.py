@@ -400,6 +400,8 @@ class LoRA_ViT_timm(nn.Module):
         
     def save_lora_parameters(self, filename: str, task_id) -> None:
         self.task_id += 1
+        if not os.path.exists(filename):
+           os.makedirs(filename)
         torch.save(self.w_As, filename + 'lora_w_a_'+str(task_id)+'.pt')
         torch.save(self.w_Bs, filename + 'lora_w_b_'+str(task_id)+'.pt')
 
